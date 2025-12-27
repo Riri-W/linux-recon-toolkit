@@ -71,7 +71,72 @@ pgsql ### Day 4: Hidden file discovery and Level 3→4 password retrieval
   - wildcard expansion (`*`),
   - safe handling of filenames that look like flags,
   - and how `grep` is used in real-world log analysis and threat hunting.
+ 
+
+### Day 6 – File discovery with find (Bandit Level 5 → 6)
+
+- Explored a directory containing multiple nested subdirectories (`maybehere00`–`maybehere19`).
+- Used metadata-based searching to locate a file without knowing its name.
+- Applied the `find` command with filters for:
+  - regular files (`-type f`)
+  - exact file size (`-size 1033c`)
+- Identified the correct file and retrieved the Level 6 password using `cat`.
+
+**Key skills:** using `find`, filtering by file size and type, navigating nested directories.  
+**Cyber relevance:** techniques used in forensic analysis and threat hunting to locate hidden or suspicious files.
+
+### Day 7 – File discovery, permissions, and troubleshooting (Bandit Level 6 → 7)
+
+- Practiced locating files based on metadata (owner, group, size) using `find`.
+- Used permission-aware searching with error suppression:
+  `find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null`
+- Retrieved the Level 7 password by identifying and reading the correct file.
+- Gained hands-on experience with Linux permission boundaries and access control.
+- Debugged multiple issues including:
+  - incorrect assumptions about challenge objectives,
+  - missing files in expected directories,
+  - permission-restricted paths,
+  - and SSH environment differences on Windows (admin vs normal PowerShell).
+
+**Key skills:** file enumeration, Linux permissions, structured troubleshooting, environment awareness.  
+**Cyber relevance:** foundational skills for forensics, incident response, and threat hunting.
 
 
+ ### Day 8 – Base64 decoding (Bandit Level 7 → 8)
+
+- Identified Base64-encoded data inside `data.txt`.
+- Used `base64 -d` to decode the file contents.
+- Extracted the Level 8 password from the decoded output.
+- Learned the difference between encoding and encryption.
+
+**Key skills:** Base64 decoding, data inspection, malware-analysis fundamentals.
+
+### Day 9 – Sorting and uniqueness analysis (Bandit Level 8 → 9)
+
+- Processed a large dataset containing many duplicate lines.
+- Used `sort` and `uniq -u` to identify the only unique entry.
+- Retrieved the Level 9 password from the unique line.
+- Practiced command chaining and anomaly detection techniques.
+
+**Key skills:** sort, uniq, pipes, data analysis fundamentals.
+ 
+### Day 10 – Strings and binary file analysis (Bandit Level 9 → 10)
+
+- Inspected a binary file using `file` to determine its type.
+- Used `strings` to extract readable content from binary data.
+- Filtered extracted strings with `grep` to identify the password.
+- Retrieved the Level 10 password.
+
+**Key skills:** binary inspection, strings extraction, command chaining, malware-analysis fundamentals.
+
+
+### Day 11 – ROT13 text transformation (Bandit Level 10 → 11)
+
+- Identified ROT13-obfuscated text in `data.txt`.
+- Used `tr` to translate alphabet characters and decode the file.
+- Retrieved the Level 11 password from the decoded output.
+- Learned the difference between obfuscation and encryption.
+
+**Key skills:** tr, character translation, cipher recognition.
 
 
