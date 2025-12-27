@@ -139,4 +139,18 @@ pgsql ### Day 4: Hidden file discovery and Level 3→4 password retrieval
 
 **Key skills:** tr, character translation, cipher recognition.
 
+### Day 12 – File identification & layered decompression (Bandit Level 11 → 12)
+
+- Copied the target file to a safe workspace in `/tmp`.
+- Used `file` to identify true file types (did not trust extensions).
+- Unpacked multiple layers using tools like `gunzip`, `bunzip2`, and `tar -xf`.
+- Repeated the identify → extract cycle until reaching ASCII text.
+- Retrieved the Level 12 password from the final extracted file.
+
+**Key skills:** file type analysis, archive handling, layered extraction, forensic workflow.
+
+.
+
+
+
 
