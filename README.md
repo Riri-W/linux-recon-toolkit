@@ -149,7 +149,19 @@ pgsql ### Day 4: Hidden file discovery and Level 3→4 password retrieval
 
 **Key skills:** file type analysis, archive handling, layered extraction, forensic workflow.
 
-.
+### Day 13 – Hex dump reconstruction & layered extraction (Bandit Level 12 → 13)
+
+- Reconstructed a binary file from a hex dump using `xxd -r`.
+- Identified true file types using `file` rather than trusting extensions.
+- Extracted multiple nested layers (gzip, bzip2, tar) step-by-step.
+- Applied a forensic workflow: identify → extract → re-identify.
+- Recovered ASCII text containing the Level 13 password.
+
+**Cybersecurity relevance:**
+This mirrors real-world forensic and malware analysis workflows where attackers layer compression or obfuscation to delay analysis. Emphasizes evidence-based decision making and safe analysis practices.
+
+**Key tools:** xxd, file, gunzip, bunzip2, tar
+
 
 
 
