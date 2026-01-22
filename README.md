@@ -162,6 +162,18 @@ This mirrors real-world forensic and malware analysis workflows where attackers 
 
 **Key tools:** xxd, file, gunzip, bunzip2, tar
 
+### Day 14 – SSH key-based authentication (Bandit Level 13 → 14)
+
+-Located and used an SSH private key for authentication instead of a password.
+-Set correct file permissions to allow secure key usage.
+-Connected to the local SSH service using ssh -i privatekey bandit14@localhost.
+-Successfully authenticated as the next user via key-based login.
+-Retrieved the Level 14 password from the logged-in environment.
+
+Key skills: SSH authentication, cryptographic key usage, permission management, secure remote access.
+
+
+
 
 
 
